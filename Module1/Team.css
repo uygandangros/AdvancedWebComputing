@@ -1,0 +1,13 @@
+.teamName p { font-family: Jokerman; font-size:50px; color:#000000; margin-top: 50px; margin-left:430px;}
+#container1 { width: 500px; height: 800px; background-color:#330000; float:left; margin-top: 50px; margin-left:100px; opacity: 0.8;}
+.pic1{ margin-top: 50px; margin-left: 100px; margin-right:50px; margin-bottom: 50px;}
+.riz {  margin-top: 20px; margin-left: 180px; margin-right:20px;color:#FFFFFF;font-family: Jokerman; font-size:18px;}
+.info1 {font-family: Century Gothic; font-size:14px;margin-top: 20px; margin-left: 90px; margin-right:20px;color:#FFFFFF;}
+.social1 {margin-top: 50px; margin-left: 130px; margin-right:20px;}
+.aboutMe1 { font-family: Charlemagne Std; font-size:14px;}
+#container2 { width: 500px; height: 800px; background-color:#330000; float:right; margin-top: 50px; margin-right:100px; opacity: 0.8;}
+.pic2{ margin-top: 50px; margin-left: 120px; margin-right:50px; margin-bottom: 50px;}
+.ros { margin-top: 20px; margin-left: 180px; margin-right:20px;color:#FFFFFF; font-family: Jokerman; font-size:18px;}
+.info2 {font-family: Century Gothic; font-size:14px;margin-top: 20px; margin-left: 100px; margin-right:20px;color:#FFFFFF;}
+.social2 {margin-top: 50px; margin-left: 150px; margin-right:20px;}
+.aboutMe2 { font-family: Charlemagne Std; font-size:14px;}
