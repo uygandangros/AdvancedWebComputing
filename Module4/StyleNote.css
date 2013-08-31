@@ -1,0 +1,48 @@
+ul { list-style: none; }
+.ToDo p { font-family: Cooper Black ; 
+	font-size:40px; 
+	color:#000000; 
+	margin-top: 15px; 
+	margin-left:550px;}
+#container1 { width: 500px; 
+	height: 500px; 
+	background-color:#eeb607; 
+	float:left; margin-top: 1px;
+	 margin-left:100px; 
+	 border-radius: 10pt;}
+#container2 { width: 500px; 
+	height: 500px; 
+	background-color:#f07182; 
+	float:right; margin-top: 1px; 
+	margin-right:100px; 
+	border-radius: 10pt;}
+.main {
+    width: 1300px;
+    margin: auto;
+    font-family: sans-serif;
+}
+
+#todo-list {
+    list-style: none;
+    width: 100%;
+    padding-left: 0;
+}
+.todo-item {
+    border: 1px solid gray;
+    height: 30px;
+    padding: 5px;
+    margin-top: 5px;
+	margin-left: 12px;
+	width: 400px;
+}
+#todo-list .complete {
+   float: right;
+}
+
+#btn-add { font-family:Tekton Pro Ext; color:#000000;}
+
+.logo{ width: 10px;
+	height: 5px;
+	margin-top: 400px;
+	margin-left: 500px;
+}
