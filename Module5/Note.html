@@ -1,0 +1,206 @@
+<html>
+<head>
+
+<link rel="stylesheet" type="text/css" href="StyleNote.css">
+<title>Note</title>
+</head>
+
+<body background="IMG/cb.png">
+
+	<div class="ToDo">
+		<p><b> To Do List </b></p>	
+	</div>
+   
+    <div class='main'>
+	<div id="container1">
+	        <h2><center>Things To Do:</center></h2>
+			
+			<div class="counter">
+   			<p><input id = "checkedToDo" type = "text" value = "0" disabled>  <b>out of</b> <input id = "totalToDo" type = "text" value = "0" disabled></p>	
+   			</div>
+			
+        <input id='txtbox' type='text' onKeyPress='onClickShow(event)'/>
+		
+		<div class = "buttons">
+			<ul>
+				<li><button id = "toggle" class="button1" title"Home" onClick="onClickToggle()">Toggle</button></li>
+				<li><button id = "removeAll" class="button2" title"Home" onClick="onClickRemoveAll()">Remove All</button></li>
+			</ul>
+		</div>
+
+	    <a id='btn-add' href="#"></a>
+        <ul id='todo-list'> 
+        </ul>
+	
+	</div>
+	
+        
+	
+	   <script>
+        	var txtBoxEl = document.getElementById('txtbox');
+        	//var btnShowEl = document.getElementById('btn-add');
+        	var todoListEl = document.getElementById('todo-list');
+        	var doneListEl = document.getElementById('done-list');
+        	var arrToDo = [];
+        	var arrToDo2 = [];
+        	var checkedToDo = document.getElementById('checkedToDo');
+        	var totalToDo = document.getElementById('totalToDo');
+        	var arrChecked = [];
+        	var btnToggle = document.getElementById('toggle');
+        	var btnRemoveAll = document.getElementById('removeAll');
+        	//var verifyCheckbox = false;
+			
+
+
+		
+
+       		function onClickShow(e) {
+				for(var i = 0; i < arrToDo.length; i++){
+					if(arrToDo[i] == txtBoxEl.value){
+						var validate = true;
+					}
+				}
+
+				e.which = e.which || e.keyCode;
+   				if(e.which == 13) {
+					if(txtBoxEl.value != ""){
+						if(validate != true){
+							var itemEl = document.createElement('li');
+							var listMarkup =
+						 		'<div class="todo-item">' +
+							 	'<span class="name">'+ txtBoxEl.value + '</span>' +
+							 	'<input type = "checkbox" class = "complete" id = "completed" >' +
+								'</div>';
+							
+							itemEl.innerHTML = listMarkup;
+							var comBtnEl = itemEl.getElementsByClassName('complete')[0];
+							comBtnEl.onchange = onClickComplete;
+							
+							todoListEl.insertBefore(itemEl, todoListEl.firstChild);
+							arrToDo.push(txtBoxEl.value);
+							arrToDo2.push(txtBoxEl.value);
+							totalToDo.value = arrToDo.length;
+							//localStorage.setItem(comBtnEl);
+							//var test = localStorage.getItem(comBtnEl);
+							//console.log(test);
+							txtBoxEl.value = "";
+
+						
+						}else{
+							alert("No duplicate task!");
+						}
+					}else{
+						alert("Invalid input!");
+					}
+				}
+					
+			
+			}
+
+        	function onClickComplete() {
+        		var cbBtnEl = event.target;
+				var liItem = cbBtnEl.parentNode;
+				var cbBtnValueEl;
+				
+				if (cbBtnEl.checked) {
+					cbBtnValueEl = liItem.getElementsByClassName('name')[0];
+					for (var i = 0; i < arrToDo.length; i++){
+						if (cbBtnValueEl.innerText == arrToDo[i]){
+							arrChecked.push(arrToDo[i]);
+							arrToDo.splice(i, 1);
+							//verifyCheckbox[i] = true;
+						}
+						checkedToDo.value = arrChecked.length;
+					}
+					cbBtnValueEl.className = 'donetaskname';
+				} else {
+					cbBtnValueEl = liItem.getElementsByClassName('donetaskname')[0];
+					for (var i = 0; i < arrChecked.length; i++){
+						if (cbBtnValueEl.innerText == arrChecked[i]){
+							arrToDo.push(arrChecked[i]);
+							arrChecked.splice(i, 1);
+							//verifyCheckbox[i] = false;
+						}
+						checkedToDo.value = arrChecked.length;
+					}
+					cbBtnValueEl.className = 'name';
+				}
+
+      	   	}
+
+      	   	function onClickToggle(){
+	      	   	var chckCntr = 0;
+	            for (var i = 0; i < arrToDo2.length; i++) {
+	                var cbEl = document.getElementsByClassName('complete')[i];
+	                
+	                if (cbEl.checked) {
+	                    chckCntr++;
+	                };
+	            }
+			
+	            for (var i = 0; i < arrToDo2.length; i++) {
+	                var cbEl = document.getElementsByClassName('complete')[i];
+	            
+	                if (chckCntr != arrToDo2.length) {
+						if (!cbEl.checked) {
+							var cbBtnValueEl = document.getElementsByClassName('name')[0];
+							cbBtnValueEl.className = 'donetaskname';
+							for (var j = 0; j < arrToDo.length; j++){
+								if (cbBtnValueEl.innerText == arrToDo[j]){
+									arrChecked.push(arrToDo[j]);
+									arrToDo.splice(j, 1);
+								}
+							}
+						}
+	                    cbEl.checked = true;
+	                } else {
+						if (cbEl.checked) {
+							var cbBtnValueEl = document.getElementsByClassName('donetaskname')[0];
+							cbBtnValueEl.className = 'name';
+							for (var j = 0; j < arrChecked.length; j++){
+								if (cbBtnValueEl.innerText == arrChecked[j]){
+									arrToDo.push(arrChecked[j]);
+									arrChecked.splice(j, 1);
+								}
+							}
+						}
+	                    cbEl.checked = false;
+	                }
+	                checkedToDo.value = arrChecked.length;
+	            }
+
+       	 	}		
+        	
+
+      	   	function onClickRemoveAll(){
+      	   		var donelength = arrChecked.length;
+				for(var i = 0; i < donelength; i++) {
+					for (var j = 0; j < arrToDo2.length; j++) {
+						if (arrChecked[i] == arrToDo2[j]) {
+							arrToDo2.splice(j, 1);
+						}
+					}
+				}
+			
+				for(var i = 0; i < donelength; i++) {
+					var liItem = document.getElementsByClassName('donetaskname')[0].parentNode.parentNode;
+					liItem.remove();
+				}
+				
+				
+				for (var i = 0; i < donelength; i++) {
+					arrChecked.splice(0, 1);
+				}
+				checkedToDo.value = arrChecked.length;
+				totalToDo.value = arrToDo.length;
+      	   	}
+
+
+       	
+		 </script>
+		 <div class="logo">
+		 <img src="IMG/logoRAR.png">
+		</div>
+	
+</body>
+</html>

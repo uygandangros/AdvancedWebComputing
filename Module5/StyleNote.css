@@ -1,0 +1,107 @@
+ul { list-style: none; }
+.ToDo p { font-family: Cooper Black ; 
+	font-size:40px; 
+	color:#000000; 
+	margin-top: 15px; 
+	margin-left:560px;}
+
+.counter{margin-left:220px;
+}
+
+#checkedToDo{ width: 20px;
+	height: 20px;
+	border: 0px;
+	text-align: center;
+	background: transparent;
+	font-weight: bold;
+	font-style: sans-serif;
+	color: #000000;
+}
+
+#totalToDo{ width: 20px;
+	height: 20px;
+	border: 0px;
+	text-align: center;
+	background: transparent;
+	font-weight: bold;
+	font-style: sans-serif;
+	color: #000000;
+}
+
+#container1 { width: 540px; 
+	height: 550px; 
+	background-color:#eeb607; 
+	float:left;
+	 margin-left:380px; 
+	 border-radius: 10pt;
+	 }
+.main {
+    width: 1300px;
+    margin: auto;
+    font-family: sans-serif;
+	margin-top:5px;
+}
+
+#todo-list {
+    list-style: none;
+    width: 100%;
+    padding-left: 0;
+}
+.todo-item {
+    border: 1px solid black;
+    height: 20px;
+    padding: 2px;
+    margin-top: 5px;
+	margin-left: 15px;
+	width: 500px;
+}
+#todo-list .complete  { margin-top:3px;
+   float: left;
+}
+
+#btn-add { font-family:Tekton Pro Ext; color:#000000;}
+
+.logo{ width: 3px;
+	height: 3px;
+	float:left;
+	margin-top:470px;
+	margin-left:160px;
+}
+
+#txtbox{ width:500px;
+	height:30px;
+	margin-left:20px;
+}
+
+.button1{font-family:Showcard Gothic;
+   		font-size:20px;
+   		color:#FFFFFF;
+   		background:#C93D4A;
+		width: 150px;
+		height: 50px;
+		margin-top: 10px;
+		margin-left: 60px;
+    	border-radius: 10px;
+   		border-style:none;
+		float:left;
+ }
+ .button2{font-family:Showcard Gothic;
+   		font-size:20px;
+   		color:#FFFFFF;
+   		background:#C93D4A;
+		width: 150px;
+		height: 50px;
+		margin-top: 10px;
+		margin-left: 50px;
+    	border-radius: 10px;
+   		border-style:none;
+}   
+.button1:hover{
+   color:#000000;
+}
+.button2:hover{
+   color:#000000;
+}
+.donetaskname{
+	text-decoration: line-through;
+}
