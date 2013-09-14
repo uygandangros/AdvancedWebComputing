@@ -1,0 +1,181 @@
+body {
+    padding-top: 70px;
+	padding-bottom: 70px;
+}
+.navbar {
+	display: none;
+}
+.home-page{
+	margin-left: 15%;
+	margin-right: 15%;
+}
+
+.one {
+display: none;
+}
+
+.two{
+display: none;
+}
+
+.boxOffice:hover{
+	-moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+	-ms-filter: "FlipH";
+}
+
+.inTheaters:hover{
+	-moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+	-ms-filter: "FlipH";
+}
+
+.openingMovies:hover{
+	-moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+	-ms-filter: "FlipH";
+}
+
+.upcomingMovies:hover{
+	-moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+	-ms-filter: "FlipH";
+}
+
+.topRentals:hover{
+	-moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+	-ms-filter: "FlipH";
+}
+
+.currentRelease:hover{
+	-moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+	-ms-filter: "FlipH";
+}
+
+.newRelease:hover{
+	-moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+	-ms-filter: "FlipH";
+}
+
+.upcomingDVDs:hover{
+	-moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+	-ms-filter: "FlipH";
+}
+
+#container1 { 
+width: 500px; 
+height: 1000px; 
+background-color:#808080; 
+float:left; 
+margin-top: 50px; 
+margin-left:50px; 
+opacity: 0.8;
+}
+
+.pic1{ 
+margin-top: 50px; 
+margin-left: 100px; 
+margin-right:50px; 
+margin-bottom: 50px;
+}
+
+.riz {  
+margin-top: 20px; 
+margin-left: 180px; 
+margin-right:20px;
+color:#FFFFFF;
+font-family: Century Gothic; 
+font-size:18px;
+}
+
+.info1 {
+font-family: Century Gothic; 
+font-size:14px;
+margin-top: 20px; 
+margin-left: 65px; 
+margin-right:20px;
+color:#FFFFFF;
+}
+
+.social1 {
+margin-top: 50px; 
+margin-left: 130px; 
+margin-right:20px;
+}
+
+.aboutMe1 { 
+font-family: Charlemagne Std; 
+font-size:14px;
+}
+
+#container2 { 
+width: 500px; 
+height: 1000px; 
+background-color:#808080; 
+float:right; 
+margin-top: 50px; 
+margin-left:50px; 
+opacity: 0.8;
+}
+
+.pic2{ 
+margin-top: 50px; 
+margin-left: 120px; 
+margin-right:50px; 
+margin-bottom: 50px;
+}
+
+.ros { 
+margin-top: 20px; 
+margin-left: 180px; 
+margin-right:20px;
+color:#FFFFFF; 
+font-family: Jokerman; 
+font-size:18px;
+}
+
+.info2 {
+font-family: Century Gothic; 
+font-size:14px;
+margin-top: 20px; 
+margin-left: 65px; 
+margin-right:20px;
+color:#FFFFFF;
+}
+.social2 {
+margin-top: 50px; 
+margin-left: 150px; 
+margin-right:20px;
+}
+.aboutMe2 { 
+font-family: Charlemagne Std; 
+font-size:14px;
+}
